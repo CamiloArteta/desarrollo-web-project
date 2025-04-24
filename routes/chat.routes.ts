@@ -8,7 +8,7 @@ chatRouter.post("/productos", async (req: Request, res: Response): Promise<any> 
     const { chatInput, sessionId } = req.body
     
     try {
-        const response = await Chat.chat(chatInput, sessionId);
+        const response: any = await Chat.chat(chatInput, sessionId);
     
         return res.status(200).send({
             status: "success",

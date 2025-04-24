@@ -10,6 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Chat = void 0;
+const mongo_controller_1 = require("./mongo.controller");
 class Chat {
     static chat(message, sessionId) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -24,6 +25,7 @@ class Chat {
                 })
             });
             const chatResponse = yield chat.json();
+            yield mongo_controller_1.Mongo.save(message, chatResponse.output);
             return chatResponse;
         });
     }
