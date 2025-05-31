@@ -9,7 +9,7 @@ const name = "test"
 
 export class Mongo {
     static async connectDB(): Promise<void> {
-        const mongoURI = "mongodb://mongo:hkhhqTAPPkCqymnAgujqHnwsvlcyOmdf@interchange.proxy.rlwy.net:23158"
+        const mongoURI = "mongodb://mongo:gKIjdyALUbjuVKRvPJFnLfYNVvHMnrJm@shuttle.proxy.rlwy.net:27757"
         try {
           await mongoose.connect(mongoURI);
           console.log('✅ Conectado a MongoDB');

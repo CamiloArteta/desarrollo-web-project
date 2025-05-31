@@ -23,7 +23,7 @@ const name = "test";
 class Mongo {
     static connectDB() {
         return __awaiter(this, void 0, void 0, function* () {
-            const mongoURI = "mongodb://mongo:hkhhqTAPPkCqymnAgujqHnwsvlcyOmdf@interchange.proxy.rlwy.net:23158";
+            const mongoURI = "mongodb://mongo:gKIjdyALUbjuVKRvPJFnLfYNVvHMnrJm@shuttle.proxy.rlwy.net:27757";
             try {
                 yield mongoose_1.default.connect(mongoURI);
                 console.log('✅ Conectado a MongoDB');
