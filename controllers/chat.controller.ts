@@ -2,7 +2,7 @@ import { Mongo } from "./mongo.controller";
 
 export class Chat {
     static async chat(message: string, sessionId: string): Promise<void> {
-        const chat = await fetch("http://54.173.193.122:5678/webhook/product/chat", {
+        const chat = await fetch("http://44.202.209.94:5678/webhook/reports/chat", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
