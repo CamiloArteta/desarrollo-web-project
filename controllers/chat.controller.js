@@ -14,7 +14,7 @@ const mongo_controller_1 = require("./mongo.controller");
 class Chat {
     static chat(message, sessionId) {
         return __awaiter(this, void 0, void 0, function* () {
-            const chat = yield fetch("http://44.202.209.94:5678/webhook/reports/chat", {
+            const chat = yield fetch("http://44.202.209.94:5678/webhook/api/chat", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -25,6 +25,7 @@ class Chat {
                 })
             });
             const chatResponse = yield chat.json();
+            console.log(chatResponse);
             yield mongo_controller_1.Mongo.save(message, chatResponse.output);
             return chatResponse;
         });
